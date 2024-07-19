@@ -3,7 +3,7 @@ layout: post
 title:  "Search"
 description: 
 date: "2024-07-08"
-authors:
+authors: ["m8sec"]
 toc: true
 image: 
   path: "/assets/img/tools/search_tools.png"
@@ -26,7 +26,7 @@ Inspired by [IntelTechniques](https://inteltechniques.com/tools/) OSINT resource
 * [Directory Listings](#directory-listings)
 * [Open Redirect](#open-redirect)
 * [XSS Parameters](#xss-parameters)
-* [Sensative Parameters](#sensative-parameters)
+* [Sensitive Parameters](#sensitive-parameters)
 
 <hr>
 
@@ -430,7 +430,7 @@ Inspired by [IntelTechniques](https://inteltechniques.com/tools/) OSINT resource
 </script>
 
 
-## Sensative Parameters
+## Sensitive Parameters
 
 <form onsubmit="searchParameters_01(this.domain.value);">
     <input type="text" name="domain" size="20" placeholder="Domain Name" required />
@@ -456,6 +456,7 @@ Inspired by [IntelTechniques](https://inteltechniques.com/tools/) OSINT resource
     }
 </script>
 
+<hr>
 
 ### Disclaimer
 The tools provided on this page are offered “as-is”, without warranty, and disclaiming liability for damages resulting from use. Your on your own, use responsibly!

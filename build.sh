@@ -1,4 +1,6 @@
 #!/bin/bash
+# Rebuild Jekyll site for gh-pages
+rm Gemfile.lock
 rm -rf docs
 rm -rf _site
 bundle install
