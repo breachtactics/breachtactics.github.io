@@ -1,6 +1,6 @@
 ---
-layout: "post"
-title:  "Online Search Tools"
+layout: post
+title:  "Search"
 description: 
 date: "2024-07-08"
 authors:
@@ -14,9 +14,6 @@ image:
 Inspired by [IntelTechniques](https://inteltechniques.com/tools/) OSINT resources, the following tools were created to simplify reconnaissance during offensive security testing and bug bounty hunting.
 
 > *Each item is executed on your own system in a dedicated browser tab. NO data is collected or stored by this site.*
-
-#### Disclaimer
-The tools provided on this page are offered “as-is”, without warranty, and disclaiming liability for damages resulting from use. Your on your own, use responsibly!
 
 <hr>
 
@@ -458,3 +455,7 @@ The tools provided on this page are offered “as-is”, without warranty, and d
         window.open('https://duckduckgo.com/?q=inurl:cmd= | inurl:exe= | inurl:exec= | inurl:query= | inurl:ping= | inurl:read= | inurl:run= | inurl:code= | inurl:do= | inurl:fetch= | inurl:file= | inurl:detail= | inurl:dir= | inurl:doc= | inurl:locate= | inurl:html= | inurl:data= | inurl:domain= | inurl:path= | inurl:secret= | inurl:password= | inurl:phone= | inurl:email= | inurl:server= inurl:%26 inurl:http site:' + domain);
     }
 </script>
+
+
+### Disclaimer
+The tools provided on this page are offered “as-is”, without warranty, and disclaiming liability for damages resulting from use. Your on your own, use responsibly!

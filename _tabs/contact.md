@@ -1,5 +1,6 @@
 ---
 layout: "page"
+title: "Contact"
 icon: "fas fa-user"
 order: 3
 ---
