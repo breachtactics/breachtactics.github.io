@@ -56,7 +56,6 @@ Follow along with the latest updates using the links below or get in touch using
 <div class="container mt-5" id="related-posts">
   <div class="row">
 
-    <!-- 2 col - Card 1 <div class="col"> -->
     <!-- 3 col - Card 1 -->
     <div class="col-12 col-sm-4">
       <div class="card h-100" style="background-color:#1e1e1e;color:white;border:0.25px #686868 solid;">

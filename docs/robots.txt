@@ -8,3 +8,4 @@ Disallow: /
 Allow: /$
 Allow: /blog/
 Allow: /tools/
+Allow: /assets/img/
