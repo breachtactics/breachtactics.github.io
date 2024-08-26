@@ -18,9 +18,9 @@ image:
 
 
 ## Overview
-**Cradle Wizard** is an online tool to generate download cradles in various languages. This can be used during 
-*Offensive security testing*, *certification courses*, or other *ethical hacking exercises* to easily download and 
-execute different payloads on a target system.
+**Cradle Wizard** is an online tool used to generate advanced download cradles across various languages. This can be  
+used during *Offensive security testing*, *certification courses*, or other *ethical hacking exercises* to easily 
+download and execute different payloads on a target system.
 
 <br>
 

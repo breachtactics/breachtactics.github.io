@@ -50,7 +50,7 @@ to share with the community and help uncover vulnerabilities in complex environm
 ## Experience
 * Participant in vulnerability disclosure programs through [HackerOne](https://hackerone.com), [BugCrowd](https://bugcrowd.com), and [Synack Red Team](https://www.synack.com/).
 * Mimecast Security Researcher [Wall-of-Fame](https://www.mimecast.com/responsible-disclosure/)
-* [CVE-2021-41322](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41322): Poly VVX 400/410 v5.3 Privilege Escalation
+* [CVE-2021-41322](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-41322): Poly VVX 400/410 v5.3 Web UI Privilege Escalation
 * [CVE-2021-3816](https://bugzilla.redhat.com/show_bug.cgi?id=2042284): Cacti v1.1.38 Stored HTML Injection
 * [CVE-2021-23225](https://bugzilla.redhat.com/show_bug.cgi?id=2042289): Cacti v1.1.38 Stored XSS
 * [CVE-2021-26247](https://bugzilla.redhat.com/show_bug.cgi?id=2042292): Cacti v0.8.7g Reflected XSS

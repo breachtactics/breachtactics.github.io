@@ -56,8 +56,9 @@ Follow along with the latest updates using the links below or get in touch using
 <div class="container mt-5" id="related-posts">
   <div class="row">
 
-    <!-- Card 1 -->
-    <div class="col">
+    <!-- 2 col - Card 1 <div class="col"> -->
+    <!-- 3 col - Card 1 -->
+    <div class="col-12 col-sm-4">
       <div class="card h-100" style="background-color:#1e1e1e;color:white;border:0.25px #686868 solid;">
         <div class="card-body">
           <a href="/tools/search">
@@ -77,7 +78,7 @@ Follow along with the latest updates using the links below or get in touch using
     </div>
 
     <!-- Card 2 -->
-    <div class="col">
+    <div class="col-12 col-sm-4">
       <div class="card h-100" style="background-color:#1e1e1e;color:white;border:0.25px #686868 solid;">
         <div class="card-body">
           <a href="/blog">
@@ -97,7 +98,7 @@ Follow along with the latest updates using the links below or get in touch using
     </div>
 
     <!-- Card 3 -->
-    <div class="col">
+    <div class="col-12 col-sm-4">
       <div class="card h-100" style="background-color:#1e1e1e;color:white;border:0.25px #686868 solid;">
         <div class="card-body">
           <a href="/blog">
