@@ -5,7 +5,6 @@ description:
 date: "2024-08-19"
 authors: ["m8sec"]
 toc: true
-draft: true
 image: 
   path: "/assets/img/index/cradle_wizard_index.png"
 ---

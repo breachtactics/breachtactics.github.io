@@ -4,7 +4,7 @@ title: Home
 icon: fas fa-home
 toc: false
 ---
-Welcome to BreachTactics! Created by [m8sec](/authors/m8sec), this site showcases current research, introduces new tooling, and provides 
+Welcome to [BreachTactics](/)! - Created by [m8sec](/authors/m8sec), this site showcases current research, introduces new tooling, and provides 
 documentation on existing projects in the realm of offensive security!
 
 Follow along with the latest updates using the links below or get in touch using the [contact](/contact) page:
