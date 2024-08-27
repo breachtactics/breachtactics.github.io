@@ -1,6 +1,4 @@
 # The Site Configuration
-
-# Import the theme
 theme: jekyll-theme-chirpy
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
@@ -14,26 +12,26 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BreachTactics # the main title
+title: BreachTactics
 
 tagline: "Research, Tooling, Education"
 
-description: "Hacker Education. Breachtactics provides offensive Security research, tooling, & education."
+description: "Breach tactics provides hacker education, in-depth tutorials, and strategies designed for cybersecurity professionals. Stay ahead in the ever-evolving landscape of cyber defense. All content is provided strictly for educational purposes."
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://breachtactics.com"
 
 github:
-  username: m8sec # change to your github username
+  username: m8sec
 twitter:
-  username: m8sec # change to your twitter username
+  username: m8sec
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: "breachtactics"
-  email: info[at]breachtactics.com   # change to your email address
+  email: info[at]breachtactics.com
   links:
     # The first element serves as the copyright owner's link
     - "/contact"
@@ -99,7 +97,7 @@ avatar: "/assets/img/shield.png"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: "/assets/img/bg_banner_full.png" # string, local or CORS resources
+social_preview_image: "/assets/img/shield.png"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -147,7 +145,7 @@ pwa:
 paginate: 6
 paginate_path: "/blog/:num/"
 
-# The base URL of your site
+# The base URL of your site, leave blank for /
 baseurl:
 
 # ------------ The following options are not recommended to be modified ------------------
@@ -216,6 +214,9 @@ exclude:
   - "*.config.js"
   - package*.json
   - test
+
+plugins:
+  - jekyll-target-blank
 
 jekyll-archives:
   enabled: [categories, tags]
